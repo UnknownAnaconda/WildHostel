@@ -1,0 +1,108 @@
+.start {
+  @include bg;
+  @include flex-center;
+  background-image: url("../images/bg-start.svg");
+  min-height: 470px;
+  margin-top: 50px;
+  @media (max-width: 1380px) {
+    min-height: 410px;
+  }
+  @media (max-width: 1280px) {
+    min-height: 350px;
+  }
+  @media (max-width: 1100px) {
+    margin-top: 30px;
+  }
+  @include r($lg) {
+    min-height: 310px;
+  }
+  @media (max-width: 900px) {
+    min-height: 270px;
+  }
+  @include r($tablet) {
+    min-height: 240px;
+  }
+  @include r($sm) {
+    background-image: none;
+    min-height: auto;
+  }
+
+  &__content {
+    margin: auto;
+    max-width: 755px;
+    width: 100%;
+    text-align: center;
+    @media (max-width: 1300px) {
+      max-width: 650px;
+    }
+    @include r($desktop) {
+      max-width: 550px;
+    }
+    @include r($lg) {
+      max-width: 450px;
+    }
+  }
+
+  &__img {
+    @include objectCoverBg;
+    margin: 0 auto 12px;
+    @include r($desktop) {
+      width: 130px;
+      height: auto;
+    }
+    @media (max-width: 1100px) {
+      width: 115px;
+    }
+    @include r($lg) {
+      width: 100px;
+    }
+    @include r($sm) {
+      width: 90px;
+    }
+    @include r($phone) {
+      width: 85px;
+    }
+  }
+
+  &__title {
+    color: $black;
+    font-size: 48px;
+    line-height: 1.15;
+    font-weight: 500;
+    letter-spacing: -0.48px;
+    margin-bottom: 25px;
+    @media (max-width: 1300px) {
+      font-size: 44px;
+    }
+    @include r($desktop) {
+      font-size: 40px;
+    }
+    @media (max-width: 1100px) {
+      font-size: 36px;
+    }
+    @include r($lg) {
+      font-size: 32px;
+    }
+    @include r($sm) {
+      letter-spacing: -0.24px;
+      font-size: 28px;
+    }
+    @include r($phone) {
+      font-size: 24px;
+    }
+  }
+
+  &__btn {
+    @include r($desktop) {
+      padding: 27px 54px;
+      font-size: 18px;
+    }
+    @include r($tablet) {
+      padding: 27px 45px;
+    }
+    @include r($phone) {
+      padding: 24px 45px;
+      width: 100%;
+    }
+  }
+}

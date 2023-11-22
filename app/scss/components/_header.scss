@@ -1,0 +1,45 @@
+.header {
+  background-color: $black;
+  padding: 14px 0;
+  color: $white;
+  letter-spacing: -0.54px;
+
+  &__inner {
+    align-items: center;
+    display: flex;
+    gap: 50px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 25px;
+  }
+
+  &__link,
+  &__phone {
+    transition: color .4s, opacity .4s;
+
+    &:hover {
+      color: $accent;
+    }
+
+    &:focus {
+      opacity: .5;
+    }
+  }
+
+  &__phone {
+    margin-left: auto;
+    display: flex;
+    gap: 13px;
+
+    &::before {
+      @include bg;
+      content: "";
+      display: flex;
+      width: 24px;
+      height: 24px;
+      background-image: url("../images/icons/phone.png");
+    }
+  }
+}

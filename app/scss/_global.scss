@@ -1,0 +1,146 @@
+.body {
+  font-family: $lab;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.4;
+  color: $gray900;
+  background-color: $white100;
+  overflow-x: hidden;
+  @include r($lg) {
+    font-size: 16px;
+  }
+  @include r($phone) {
+    font-size: 15px;
+  }
+}
+
+.container {
+  max-width: 1330px;
+  padding: 0 25px;
+  margin: 0 auto;
+  width: 100%;
+  @include r($tablet) {
+    padding: 0 20px;
+  }
+}
+
+.title {
+  font-weight: 500;
+  letter-spacing: -0.32px;
+  font-size: 32px;
+  margin-bottom: 25px;
+  line-height: 1.14;
+  color: $black;
+  @include r($lg) {
+    font-size: 28px;
+  }
+  @include r($tablet) {
+    font-size: 24px;
+  }
+  @include r($sm) {
+    letter-spacing: -0.24px;
+  }
+
+  &--white {
+    color: $white;
+  }
+}
+
+.logo {
+  transition: opacity .3s, outline .3s;
+  border-radius: 3px;
+
+  &:hover {
+    opacity: .5;
+  }
+
+  &:focus {
+    outline: 2px solid $accent;
+  }
+
+  &__img {
+    @include objectCoverBg;
+    object-fit: contain;
+  }
+}
+
+.btn {
+  text-align: center;
+  display: inline-block;
+  padding: 27px 54px;
+  line-height: 1;
+  font-weight: 500;
+  color: $white;
+  background-color: $accent;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  letter-spacing: -0.54px;
+  transition: color .4s, opacity .4s, background-color .4s;
+  @include r($desktop) {
+    padding: 23px 45px;
+  }
+  @include r($lg) {
+    padding: 20px 40px;
+  }
+  @include r($tablet) {
+    padding: 18px 35px;
+    font-size: 16px;
+  }
+  @include r($phone) {
+    padding: 16px 35px;
+  }
+  @media (max-width: 360px) {
+    font-size: 14px;
+  }
+
+  &:hover {
+    background-color: transparent;
+    border-color: $accent;
+    color: $black;
+  }
+
+  &:focus {
+    opacity: .5;
+  }
+}
+
+.indent {
+  margin-top: 80px;
+  @include r($sm) {
+    margin-top: 60px;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+svg, path {
+  transition: all .4s;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba($accent, 0.2);
+}
+
+::-webkit-scrollbar-thumb,
+::selection {
+  background-color: $accent;
+}
+
+::selection {
+  color: $white;
+}

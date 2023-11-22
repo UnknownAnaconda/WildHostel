@@ -1,0 +1,18 @@
+@import 'reset';
+@import 'fonts';
+@import 'vars';
+@import 'mixin';
+@import 'libs';
+@import 'global';
+
+@import 'components/header';
+@import 'components/footer';
+
+@import 'home/start';
+
+@import 'home/reviews';
+@import 'home/rides';
+@import 'home/rooms';
+@import 'home/galery';
+@import 'home/stocks';
+@import 'home/contacts';

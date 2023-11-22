@@ -1,0 +1,100 @@
+.footer {
+  background-color: $black;
+  padding: 43px 0;
+  color: $white;
+  letter-spacing: -0.54px;
+  font-size: 18px;
+  @media (max-width: 860px) {
+    padding: 40px 0;
+    margin-top: 40px;
+  }
+
+  &__inner {
+    display: flex;
+    gap: 100px;
+    @media (max-width: 1030px) {
+      gap: 65px;
+    }
+    @media (max-width: 860px) {
+      gap: 45px;
+      flex-direction: column;
+    }
+  }
+
+  &__author {
+    @include flex-column(12);
+    max-width: 185px;
+    width: 100%;
+
+    &-link {
+      transition: color .4s, opacity .4s;
+      font-family: $ttFirs;
+      line-height: 1.3;
+
+      &:hover {
+        color: $accent;
+      }
+
+      &:focus {
+        opacity: .5;
+      }
+    }
+  }
+
+  &__list {
+    @include flex-column(25);
+  }
+
+  &__item {
+    @include flex-column(12);
+  }
+
+  &__name {
+    font-family: $ttFirs;
+
+    &--short {
+      max-width: 130px;
+    }
+  }
+
+  &__link,
+  &__address-link {
+    transition: color .4s, opacity .4s;
+    color: $gray150;
+    align-self: flex-start;
+
+    &:hover {
+      color: $accent;
+    }
+
+    &:focus {
+      opacity: .4;
+    }
+  }
+
+  &__link {
+    position: relative;
+    padding-bottom: 2px;
+    display: flex;
+    gap: 13px;
+
+    &::before {
+      @include bg;
+      content: "";
+      display: flex;
+      width: 24px;
+      height: 24px;
+      background-image: url("../images/icons/phone.png");
+    }
+  }
+
+  &__address {
+    font-family: $ttFirs;
+    max-width: 280px;
+    @include flex-column(12);
+  }
+
+  .logo {
+    align-self: flex-start;
+  }
+}
