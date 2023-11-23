@@ -1,8 +1,17 @@
 .benefits {
   letter-spacing: 0.36px;
+  @media (max-width: 1190px) {
+    margin-bottom: -15px;
+  }
 
   &__title {
     margin-bottom: 50px;
+    @include r($sm) {
+      margin-bottom: 40px;
+    }
+    @include r($phone) {
+      margin-bottom: 25px;
+    }
   }
 
   &__list {
@@ -16,32 +25,54 @@
 
     &--one {
       max-width: 220px;
+      @media (max-width: 1190px) {
+        max-width: 100%;
+      }
     }
 
     &--two {
       max-width: 202px;
+      @media (max-width: 1190px) {
+        max-width: 100%;
+      }
     }
 
     &--three {
       max-width: 170px;
+      @media (max-width: 1190px) {
+        max-width: 100%;
+      }
     }
 
     &--four {
       max-width: 175px;
+      @media (max-width: 1190px) {
+        max-width: 100%;
+      }
     }
 
     &--five {
       max-width: 270px;
+      @media (max-width: 1190px) {
+        max-width: 100%;
+      }
     }
   }
 
   &__item {
     @include flex-column(15);
+    font-size: 18px;
 
     ul {
       @include flex-column(12);
       list-style: disc;
       padding-left: 30px;
+      @include r($sm) {
+        padding-left: 25px;
+      }
+      @include r($phone) {
+        padding-left: 22px;
+      }
     }
   }
 
@@ -116,6 +147,13 @@
 
     span {
       border-bottom: 2px solid $black;
+    }
+  }
+
+  .buttons-navigation {
+    display: none;
+    @media (max-width: 1190px) {
+      display: flex;
     }
   }
 }

@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
           content="Комфорт и доступность в мировой столицы Москва">
-    <meta http-equiv="cache-control" content="public, max-age=3600">
+    <meta http-equiv="content-type" content="public, max-age=3600">
     <title>Олимп хостел</title>
     <link rel="icon" href="images/icons/favicon.svg" type="images/x-icon">
     <link rel="shortcut icon" href="images/icons/favicon.svg" type="images/x-icon">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body class="body">
 
@@ -49,8 +50,13 @@
                         <a class="header__link" href="#contacts">Контакты</a>
                     </li>
                 </ul>
+                <a class="header__btn btn" href="">Забронировать</a>
             </nav>
             <a class="header__phone" href="tel:+79060163333">+7 (906) 016-33-33</a>
+            <button class="menu-btn menu-btn--header">
+                <span class="menu-btn__line"></span>
+                <span class="sr-only">Взаимодействовать с меню</span>
+            </button>
         </div>
     </div>
 </header>
@@ -110,140 +116,156 @@
     <section class="benefits indent">
     <div class="container">
         <h2 class="benefits__title title">Какие есть ещё удобства?</h2>
-        <ul class="benefits__list">
-            <li class="benefits__column benefits__column--one">
-                <div class="benefits__item">
+        <div class="benefits__swiper">
+            <ul class="benefits__list">
+               <li class="benefits__column">
+                   <div class="benefits__column column benefits__column--one">
+                       <div class="benefits__item">
                     <span class="benefits__name benefits__name--general">
                         <span>Общее</span>
                     </span>
-                    <ul>
-                        <li>Кондиционер</li>
-                        <li>Места для курения</li>
-                        <li>Отель для некурящих</li>
-                        <li>Отопление</li>
-                        <li>Стиральная машина</li>
-                        <li>Телевизор в лобби</li>
-                        <li>Поздняя регистрация выезда</li>
-                        <li>Сушилка</li>
-                    </ul>
-                </div>
-            </li>
-            <li class="benefits__column benefits__column--two">
-                <div class="benefits__item">
+                           <ul>
+                               <li>Кондиционер</li>
+                               <li>Места для курения</li>
+                               <li>Отель для некурящих</li>
+                               <li>Отопление</li>
+                               <li>Стиральная машина</li>
+                               <li>Телевизор в лобби</li>
+                               <li>Поздняя регистрация выезда</li>
+                               <li>Сушилка</li>
+                           </ul>
+                       </div>
+                   </div>
+               </li>
+                <li class="benefits__column">
+                    <div class="benefits__column column benefits__column--two">
+                        <div class="benefits__item">
                     <span class="benefits__name benefits__name--service">
                         <span>Услуги и удобства</span>
                     </span>
-                    <ul>
-                        <li>
-                            Гладильные принадлежности
-                        </li>
-                        <li>
-                            Гладильные услуги (отдельная оплата)
-                        </li>
-                        <li>
-                            Фен ( по запросу )
-                        </li>
-                        <li>
-                            Утюг
-                        </li>
-                    </ul>
-                </div>
-                <div class="benefits__item">
+                            <ul>
+                                <li>
+                                    Гладильные принадлежности
+                                </li>
+                                <li>
+                                    Гладильные услуги (отдельная оплата)
+                                </li>
+                                <li>
+                                    Фен ( по запросу )
+                                </li>
+                                <li>
+                                    Утюг
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="benefits__item">
                     <span class="benefits__name benefits__name--internet">
                         <span>Интернет</span>
                     </span>
-                    <ul>
-                        <li>
-                            Бесплатный Wi-Fi
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li class="benefits__column benefits__column--three">
-                <div class="benefits__item">
+                            <ul>
+                                <li>
+                                    Бесплатный Wi-Fi
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="benefits__column">
+                    <div class="benefits__column column benefits__column--three">
+                        <div class="benefits__item">
                     <span class="benefits__name benefits__name--food">
                         <span>Питание</span>
                     </span>
-                    <ul>
-                        <li>
-                            Общая кухня
-                        </li>
-                        <li>
-                            Кухня
-                        </li>
-                        <li>
-                            Микроволновая печь
-                        </li>
-                    </ul>
-                </div>
-                <div class="benefits__item">
+                            <ul>
+                                <li>
+                                    Общая кухня
+                                </li>
+                                <li>
+                                    Кухня
+                                </li>
+                                <li>
+                                    Микроволновая печь
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="benefits__item">
                     <span class="benefits__name benefits__name--personal">
                         <span>Персонал</span>
                     </span>
-                    <ul>
-                        <li>
-                            Говорит на русском
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li class="benefits__column benefits__column--four">
-                <div class="benefits__item">
+                            <ul>
+                                <li>
+                                    Говорит на русском
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="benefits__column">
+                    <div class="benefits__column column benefits__column--four">
+                        <div class="benefits__item">
                     <span class="benefits__name benefits__name--rooms">
                         <span>В номерах</span>
                     </span>
-                    <ul>
-                        <li>
-                            Обслуживание номеров
-                        </li>
-                        <li>
-                            Холодильник
-                        </li>
-                        <li>
-                            Телевизор
-                        </li>
-                        <li>
-                            Запирающийся шкафчик
-                        </li>
-                        <li>
-                            Сейф (в номере)
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li class="benefits__column benefits__column--five">
-                <div class="benefits__item">
+                            <ul>
+                                <li>
+                                    Обслуживание номеров
+                                </li>
+                                <li>
+                                    Холодильник
+                                </li>
+                                <li>
+                                    Телевизор
+                                </li>
+                                <li>
+                                    Запирающийся шкафчик
+                                </li>
+                                <li>
+                                    Сейф (в номере)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="benefits__column">
+                    <div class="benefits__column column benefits__column--five">
+                        <div class="benefits__item">
                     <span class="benefits__name benefits__name--health">
                         <span>Красота и здоровье</span>
                     </span>
-                    <ul>
-                        <li>
-                            Аптечка первой помощи
-                        </li>
-                    </ul>
-                </div>
-                <div class="benefits__item">
+                            <ul>
+                                <li>
+                                    Аптечка первой помощи
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="benefits__item">
                     <span class="benefits__name benefits__name--parking">
                         <span>Парковка</span>
                     </span>
-                    <ul>
-                        <li>
-                            Парковка (по запросу)
-                        </li>
-                    </ul>
-                </div>
-                <div class="benefits__item">
+                            <ul>
+                                <li>
+                                    Парковка (по запросу)
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="benefits__item">
                     <span class="benefits__name benefits__name--animals">
                         <span>Животные</span>
                     </span>
-                    <ul>
-                        <li>
-                            Размещение с домашними животными не допускается
-                        </li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
+                            <ul>
+                                <li>
+                                    Размещение с домашними животными не допускается
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="buttons-navigation">
+                <button class="buttons-navigation__btn buttons-navigation__btn--prev" type="button"></button>
+                <button class="buttons-navigation__btn buttons-navigation__btn--next" type="button"></button>
+            </div>
+        </div>
     </div>
 </section>
     <section class="reviews indent" id="reviews">
@@ -309,6 +331,54 @@
                         <div class="reviews__strip-shaded" style="width: 84%;"></div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="swiper reviews__swiper">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <div class="reviews__item">
+                        <span class="reviews__grade">9.1</span>
+                        <div class="reviews__head">
+                            <img class="reviews__avatar" src="images/avatars/1.jpg" alt="аватар" width="52" height="52">
+                            <span class="reviews__name">Мария</span>
+                        </div>
+                        <p class="reviews__text">
+                            Всё! Исключений нет. Прекрасные и понимающие администраторы, хлопотливая домоуправительница.
+                            Кровати
+                            оборудованы полочкой, вешалками и плотными шторами, которые позволят вам уснуть даже дом.
+                        </p>
+                    </div>
+                </li>
+                <li class="swiper-slide">
+                    <div class="reviews__item">
+                        <span class="reviews__grade">8.4</span>
+                        <div class="reviews__head">
+                            <img class="reviews__avatar" src="images/avatars/2.jpg" alt="аватар" width="52" height="52">
+                            <span class="reviews__name">Валера</span>
+                        </div>
+                        <p class="reviews__text">
+                            Это общежитие! Ночевал одну ночь. Персонал нормалёк.
+                        </p>
+                    </div>
+                </li>
+                <li class="swiper-slide">
+                    <div class="reviews__item">
+                        <span class="reviews__grade">7.3</span>
+                        <div class="reviews__head">
+                            <img class="reviews__avatar" src="images/avatars/3.jpg" alt="аватар" width="52" height="52">
+                            <span class="reviews__name">Смаркала</span>
+                        </div>
+                        <p class="reviews__text">
+                            Все в целом нормально, но много пьяных за окном орут, нормально поспать не мог, а персонал
+                            более
+                            менее хороший, по удобсвтам все тип топ.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <div class="buttons-navigation">
+                <button class="buttons-navigation__btn buttons-navigation__btn--prev" type="button"></button>
+                <button class="buttons-navigation__btn buttons-navigation__btn--next" type="button"></button>
             </div>
         </div>
         <ul class="reviews__list">
@@ -377,9 +447,64 @@
     <section class="rooms indent" id="rooms">
     <div class="container">
         <h2 class="title">Наши номера</h2>
+        <div class="swiper rooms__swiper">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <div class="rooms__item">
+                        <img class="rooms__img"
+                             src="https://cdn.worldota.net/t/828x560/extranet/48/4b/484b7fbcd05c48c01d819e15b979dc662d004623.jpeg"
+                             alt="хостел снять номер" width="365"
+                             height="220">
+                        <div class="rooms__content">
+                            <h3 class="rooms__name title">Оранжевая комната</h3>
+                            <p class="rooms__text">Уютная комната номер 17 м2</p>
+                            <span class="rooms__price">1 ночь - 500₽</span>
+                            <span class="rooms__quantity">Количества мест: 3</span>
+                        </div>
+                        <a class="rooms__btn btn" href="">Забронировать</a>
+                    </div>
+                </li>
+                <li class="swiper-slide">
+                    <div class="rooms__item">
+                        <img class="rooms__img"
+                             src="https://cdn.worldota.net/t/828x560/extranet/48/4b/484b7fbcd05c48c01d819e15b979dc662d004623.jpeg"
+                             alt="хостел снять номер" width="365"
+                             height="220">
+                        <div class="rooms__content">
+                            <h3 class="rooms__name title">Оранжевая комната 2</h3>
+                            <p class="rooms__text">Уютная комната номер 17 м2</p>
+                            <span class="rooms__price">1 ночь - 500₽</span>
+                            <span class="rooms__quantity">Количества мест: 3</span>
+                        </div>
+                        <a class="rooms__btn btn" href="">Забронировать</a>
+                    </div>
+                </li>
+                <li class="swiper-slide">
+                    <div class="rooms__item">
+                        <img class="rooms__img"
+                             src="https://cdn.worldota.net/t/828x560/extranet/48/4b/484b7fbcd05c48c01d819e15b979dc662d004623.jpeg"
+                             alt="хостел снять номер" width="365"
+                             height="220">
+                        <div class="rooms__content">
+                            <h3 class="rooms__name title">Оранжевая комната 3</h3>
+                            <p class="rooms__text">Уютная комната номер 17 м2</p>
+                            <span class="rooms__price">1 ночь - 500₽</span>
+                            <span class="rooms__quantity">Количества мест: 3</span>
+                        </div>
+                        <a class="rooms__btn btn" href="">Забронировать</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="buttons-navigation">
+                <button class="buttons-navigation__btn buttons-navigation__btn--prev" type="button"></button>
+                <button class="buttons-navigation__btn buttons-navigation__btn--next" type="button"></button>
+            </div>
+        </div>
         <ul class="rooms__list">
             <li class="rooms__item">
-                <img class="rooms__img" src="images/rooms/1.jpg" alt="хостел снять номер" width="365" height="194">
+                <img class="rooms__img"
+                     src="https://cdn.worldota.net/t/828x560/extranet/48/4b/484b7fbcd05c48c01d819e15b979dc662d004623.jpeg"
+                     alt="хостел снять номер" width="365" height="194">
                 <div class="rooms__content">
                     <h3 class="rooms__name title">Оранжевая комната</h3>
                     <p class="rooms__text">Уютная комната номер 17 м2</p>
@@ -389,7 +514,9 @@
                 <a class="rooms__btn btn" href="">Забронировать</a>
             </li>
             <li class="rooms__item">
-                <img class="rooms__img" src="images/rooms/1.jpg" alt="хостел снять номер" width="365" height="194">
+                <img class="rooms__img"
+                     src="https://cdn.worldota.net/t/828x560/extranet/48/4b/484b7fbcd05c48c01d819e15b979dc662d004623.jpeg"
+                     alt="хостел снять номер" width="365" height="194">
                 <div class="rooms__content">
                     <h3 class="rooms__name title">Оранжевая комната</h3>
                     <p class="rooms__text">Уютная комната номер 17 м2</p>
@@ -399,7 +526,9 @@
                 <a class="rooms__btn btn" href="">Забронировать</a>
             </li>
             <li class="rooms__item">
-                <img class="rooms__img" src="images/rooms/1.jpg" alt="хостел снять номер" width="365" height="194">
+                <img class="rooms__img"
+                     src="https://cdn.worldota.net/t/828x560/extranet/48/4b/484b7fbcd05c48c01d819e15b979dc662d004623.jpeg"
+                     alt="хостел снять номер" width="365" height="194">
                 <div class="rooms__content">
                     <h3 class="rooms__name title">Оранжевая комната</h3>
                     <p class="rooms__text">Уютная комната номер 17 м2</p>
@@ -417,35 +546,85 @@
         <ul class="gallery__list">
             <li class="gallery__item">
                 <a class="gallery__link" data-fancybox="gallery" data-caption="Фото санузла"
-                   href="images/gallery/1.jpg">
-                    <img class="gallery__img" src="images/gallery/1.jpg" alt="" width="415" height="330">
+                   href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/117233928.jpg?k=e5bad2201741fc64dcdbdc898760c37c8ea48fa38e2baaacc0f04b4f17d1ebeb&o=&hp=1">
+                    <img class="gallery__img"
+                         src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/117233928.jpg?k=e5bad2201741fc64dcdbdc898760c37c8ea48fa38e2baaacc0f04b4f17d1ebeb&o=&hp=1"
+                         alt="" width="415" height="330">
                 </a>
             </li>
             <li class="gallery__item">
-                <a class="gallery__link" data-fancybox="gallery" data-caption="Фото входа" href="images/gallery/3.jpg">
-                    <img class="gallery__img" src="images/gallery/3.jpg" alt="" width="415" height="330">
+                <a class="gallery__link" data-fancybox="gallery" data-caption="Фото входа"
+                   href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/117233830.jpg?k=9072e3aa8e6707c94978915ddfe0597f9b59ab7334df244bcd2cb298395f39ef&o=&hp=1">
+                    <img class="gallery__img"
+                         src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/117233830.jpg?k=9072e3aa8e6707c94978915ddfe0597f9b59ab7334df244bcd2cb298395f39ef&o=&hp=1"
+                         alt="" width="415" height="330">
                 </a>
             </li>
             <li class="gallery__item">
-                <a class="gallery__link" data-fancybox="gallery" data-caption="Фото спален" href="images/gallery/2.jpg">
-                    <img class="gallery__img" src="images/gallery/2.jpg" alt="" width="415" height="330">
+                <a class="gallery__link" data-fancybox="gallery" data-caption="Фото спален"
+                   href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/117237206.jpg?k=3dfb24af3ca8a75efba95c272c20913b974777cd25a395cd43a8eb877d04d8cc&o=&hp=1">
+                    <img class="gallery__img"
+                         src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/117237206.jpg?k=3dfb24af3ca8a75efba95c272c20913b974777cd25a395cd43a8eb877d04d8cc&o=&hp=1"
+                         alt="" width="415" height="330">
                 </a>
             </li>
             <li class="gallery__item">
-                <a class="gallery__link" data-fancybox="gallery" data-caption="Фото спален" href="images/gallery/4.jpg">
-                    <img class="gallery__img" src="images/gallery/4.jpg" alt="" width="415" height="330">
+                <a class="gallery__link" data-fancybox="gallery" data-caption="Фото спален"
+                   href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/266322621.jpg?k=a86fa9054f0944cd377c35659e3040d575ed5f69d848a3ec25485bc30f7de525&o=&hp=1">
+                    <img class="gallery__img"
+                         src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/266322621.jpg?k=a86fa9054f0944cd377c35659e3040d575ed5f69d848a3ec25485bc30f7de525&o=&hp=1"
+                         alt="" width="415" height="330">
                 </a>
             </li>
             <li class="gallery__item">
                 <a class="gallery__link" data-fancybox="gallery" data-caption="Фото санузла"
-                   href="images/gallery/5.jpg">
-                    <img class="gallery__img" src="images/gallery/5.jpg" alt="" width="415" height="330">
+                   href="https://avatars.mds.yandex.net/get-altay/10829645/2a0000018baeca80a1267ef042c59e2386da/XXXL">
+                    <img class="gallery__img"
+                         src="https://avatars.mds.yandex.net/get-altay/10829645/2a0000018baeca80a1267ef042c59e2386da/XXXL"
+                         alt="" width="415" height="330">
                 </a>
             </li>
             <li class="gallery__item">
                 <a class="gallery__link" data-fancybox="gallery" data-caption="Фото гостиницы"
-                   href="images/gallery/6.jpg">
-                    <img class="gallery__img" src="images/gallery/6.jpg" alt="" width="415" height="330">
+                   href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/266322632.jpg?k=7d10d79361c936bb74d52202ee44f45b514eeb3e6f832bd76481848efa945d2a&o=&hp=1">
+                    <img class="gallery__img"
+                         src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/266322632.jpg?k=7d10d79361c936bb74d52202ee44f45b514eeb3e6f832bd76481848efa945d2a&o=&hp=1"
+                         alt="" width="415" height="330">
+                </a>
+            </li>
+            <li class="gallery__item" style="display: none">
+                <a class="gallery__link" data-fancybox="gallery" data-caption="Фото спален"
+                   href="https://avatars.mds.yandex.net/get-altay/2402012/2a00000173a54d0f012dc3af004fc35ef72f/XXXL">
+                </a>
+            </li>
+            <li class="gallery__item" style="display: none">
+                <a class="gallery__link" data-fancybox="gallery" data-caption="Вход в хостел"
+                   href="https://avatars.mds.yandex.net/get-altay/998620/2a0000018714999db3c152b24e70c941b034/XXXL">
+                </a>
+            </li>
+            <li class="gallery__item" style="display: none">
+                <a class="gallery__link" data-fancybox="gallery" data-caption="Фото спальни"
+                   href="https://avatars.mds.yandex.net/get-altay/3843924/2a0000017698fb0c04c468b8c5fa031699fe/XXXL">
+                </a>
+            </li>
+            <li class="gallery__item" style="display: none">
+                <a class="gallery__link" data-fancybox="gallery" data-caption="Фото санузла"
+                   href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/266322630.jpg?k=8bc6c5eea95d28a0f89ba1e25127af4c05156143b7a5888ab4bcd423c23b2611&o=&hp=1">
+                </a>
+            </li>
+            <li class="gallery__item" style="display: none">
+                <a class="gallery__link" data-fancybox="gallery" data-caption="Фото спальни"
+                   href="https://avatars.mds.yandex.net/get-altay/5272526/2a00000181ed2940a680bd2a786dd27758af/XXXL">
+                </a>
+            </li>
+            <li class="gallery__item" style="display: none">
+                <a class="gallery__link" data-fancybox="gallery" data-caption="Фото входа"
+                   href="https://avatars.mds.yandex.net/get-altay/10702222/2a0000018baeca82f28d4c7cab84b58ccaf5/XXXL">
+                </a>
+            </li>
+            <li class="gallery__item" style="display: none">
+                <a class="gallery__link" data-fancybox="gallery" data-caption="Фото кухни"
+                   href="https://avatars.mds.yandex.net/get-altay/897342/2a0000018baeca7b61e12bf08fd9e0a8463a/XXXL">
                 </a>
             </li>
         </ul>
@@ -521,10 +700,13 @@
             </ul>
             <div class="footer__address">
                 <span class="footer__name footer__name--short">Наше расположение</span>
-                <a class="footer__address-link" href="">Хорошёвский район, 3-й Хорошевский проезд, д.8, Москва</a>
+                <a class="footer__address-link"
+                   href="https://yandex.ru/maps/org/olimp/34592576917/?from=mapframe&ll=37.538242%2C55.773631&z=17"
+                   target="_blank">Хорошёвский район, 3-й Хорошевский проезд, д.8, Москва</a>
             </div>
         </div>
     </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="js/main.min.js" type="module" defer></script>

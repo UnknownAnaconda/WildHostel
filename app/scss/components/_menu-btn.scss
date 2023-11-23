@@ -1,0 +1,81 @@
+.menu-btn {
+  height: 43px;
+  width: 43px;
+  cursor: pointer;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  padding: 18px 13px;
+  transition: border .3s, opacity .3s;
+
+  &--header {
+    @media (max-width: 1240px) {
+      display: block;
+    }
+    @media (max-width: 530px) {
+      margin-left: auto;
+    }
+  }
+
+  &:hover {
+    border-color: $accent;
+  }
+
+  &:focus {
+    opacity: .5;
+  }
+
+  &__line,
+  &__line::after,
+  &__line::before {
+    background-color: $white;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 2px;
+    transition: .3s ease-in-out .3s;
+  }
+
+  &__line::after,
+  &__line::before {
+    position: absolute;
+  }
+
+  &__line {
+    position: relative;
+    display: flex;
+
+    &::before {
+      margin-top: -6px;
+    }
+
+    &::after {
+      margin-top: 6px;
+    }
+  }
+
+  &.active {
+    .menu-btn__line {
+      background: transparent;
+      transition: .5s ease-in-out;
+      transform: rotate(-90deg);
+
+      &::before {
+        margin-top: 0;
+        transform: rotate(-45deg);
+        transition-delay: .5s;
+      }
+
+      &::after {
+        margin-top: 0;
+        transform: rotate(45deg);
+        transition-delay: .5s;
+      }
+    }
+  }
+}

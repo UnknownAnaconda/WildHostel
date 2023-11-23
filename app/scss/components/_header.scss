@@ -12,11 +12,48 @@
     align-items: center;
     display: flex;
     gap: 50px;
+    @include r($tablet) {
+      gap: 40px;
+    }
+    @include r($sm) {
+      gap: 35px;
+    }
+  }
+
+  &__nav {
+    @media (max-width: 1240px) {
+      padding: 25px;
+      width: 100%;
+      top: 71px;
+      left: 0;
+      position: absolute;
+      z-index: 0;
+      background-color: $white;
+      border-bottom: 1px solid rgba($blue, .3);
+      transform: translateY(-200%);
+      transition: all .6s ease-in-out;
+    }
+    @include r($sm) {
+      font-size: 16px;
+    }
+
+    &--active {
+      transform: translateY(0);
+    }
   }
 
   &__list {
     display: flex;
     gap: 25px;
+    @media (max-width: 1240px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      color: $blue;
+    }
+    @include r($phone) {
+      gap: 15px;
+    }
   }
 
   &__link,
@@ -36,6 +73,12 @@
     margin-left: auto;
     display: flex;
     gap: 13px;
+    @media (max-width: 1240px) {
+      font-size: 18px;
+    }
+    @media (max-width: 530px) {
+      display: none;
+    }
 
     &::before {
       @include bg;
@@ -44,6 +87,18 @@
       width: 24px;
       height: 24px;
       background-image: url("../images/icons/phone.png");
+    }
+  }
+
+  &__btn {
+    font-size: 18px;
+    display: none;
+    padding: 9px 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    margin-top: 25px;
+    @media (max-width: 530px) {
+      display: block;
     }
   }
 }

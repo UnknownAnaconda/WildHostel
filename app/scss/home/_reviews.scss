@@ -1,4 +1,18 @@
 .reviews {
+  &__swiper {
+    margin-bottom: 50px;
+    @include r($lg) {
+      margin-bottom: 30px;
+    }
+    @include r($phone) {
+      margin-bottom: 25px;
+    }
+
+    .swiper-wrapper {
+      padding-bottom: 20px;
+    }
+  }
+
   &__statistics,
   &__list {
     display: grid;
@@ -60,6 +74,9 @@
 
   &__list {
     margin-bottom: 50px;
+    @media (max-width: 1170px) {
+      display: none;
+    }
     @include r($lg) {
       margin-bottom: 40px;
     }
@@ -72,6 +89,7 @@
   }
 
   &__item {
+    height: 100%;
     letter-spacing: 0.36px;
     position: relative;
     line-height: 1.3;

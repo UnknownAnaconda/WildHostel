@@ -1,8 +1,22 @@
 .rooms {
+  @media (max-width: 1100px) {
+    margin-bottom: -15px;
+  }
+
+  &__swiper {
+    display: none;
+    @media (max-width: 1100px) {
+      display: block;
+    }
+  }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 18px;
+    @media (max-width: 1100px) {
+      display: none;
+    }
   }
 
   &__item {
@@ -18,11 +32,30 @@
 
   &__img {
     @include objectCoverBg;
+    width: 100%;
     @media (max-width: 1100px) {
       border-radius: 10px;
     }
     @include r($tablet) {
       height: 205px;
+    }
+    @media (max-width: 960px) {
+      height: 200px;
+    }
+    @media (max-width: 800px) {
+      height: 180px;
+    }
+    @include r($tablet) {
+      height: 170px;
+    }
+    @media(max-width: 680px) {
+      height: 220px;
+    }
+    @include r($phone) {
+      height: 200px;
+    }
+    @media (max-width: 380px) {
+      height: 180px;
     }
   }
 
