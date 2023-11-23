@@ -6,13 +6,33 @@
   }
 
   &__list {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 36px;
+    display: flex;
+    gap: 36px;
+    justify-content: space-between;
   }
 
   &__column {
     @include flex-column(25);
+
+    &--one {
+      max-width: 220px;
+    }
+
+    &--two {
+      max-width: 202px;
+    }
+
+    &--three {
+      max-width: 170px;
+    }
+
+    &--four {
+      max-width: 175px;
+    }
+
+    &--five {
+      max-width: 270px;
+    }
   }
 
   &__item {
@@ -21,7 +41,7 @@
     ul {
       @include flex-column(12);
       list-style: disc;
-      padding-left: 20px;
+      padding-left: 30px;
     }
   }
 
