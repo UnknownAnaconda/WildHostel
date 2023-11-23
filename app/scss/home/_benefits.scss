@@ -1,0 +1,101 @@
+.benefits {
+  letter-spacing: 0.36px;
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 36px;
+  }
+
+  &__column {
+    @include flex-column(25);
+  }
+
+  &__item {
+    @include flex-column(15);
+
+    ul {
+      @include flex-column(12);
+      list-style: disc;
+      padding-left: 20px;
+    }
+  }
+
+  &__name {
+    display: flex;
+    align-self: flex-start;
+    gap: 12px;
+    color: $black;
+    font-weight: 500;
+
+    &--general {
+      &::before {
+        background-image: url("../images/icons/general.svg");
+      }
+    }
+
+    &--service {
+      &::before {
+        background-image: url("../images/icons/service.svg");
+      }
+    }
+
+    &--internet {
+      &::before {
+        background-image: url("../images/icons/internet.svg");
+      }
+    }
+
+    &--food {
+      &::before {
+        background-image: url("../images/icons/food.svg");
+      }
+    }
+
+    &--personal {
+      &::before {
+        background-image: url("../images/icons/personal.svg");
+      }
+    }
+
+    &--rooms {
+      &::before {
+        background-image: url("../images/icons/rooms.svg");
+      }
+    }
+
+    &--health {
+      &::before {
+        background-image: url("../images/icons/health.svg");
+      }
+    }
+
+    &--parking {
+      &::before {
+        background-image: url("../images/icons/parking.svg");
+      }
+    }
+
+    &--animals {
+      &::before {
+        background-image: url("../images/icons/animals.svg");
+      }
+    }
+
+    &::before {
+      content: "";
+      @include bg;
+      display: flex;
+      width: 24px;
+      height: 24px;
+    }
+
+    span {
+      border-bottom: 2px solid $black;
+    }
+  }
+}

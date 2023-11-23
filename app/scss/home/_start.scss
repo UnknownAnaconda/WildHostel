@@ -1,9 +1,9 @@
 .start {
+  margin-top: 110px;
   @include bg;
   @include flex-center;
   background-image: url("../images/bg-start.svg");
   min-height: 470px;
-  margin-top: 50px;
   @media (max-width: 1380px) {
     min-height: 410px;
   }
