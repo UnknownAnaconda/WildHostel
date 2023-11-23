@@ -3,6 +3,10 @@
   padding: 14px 0;
   color: $white;
   letter-spacing: -0.54px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 200;
 
   &__inner {
     align-items: center;
